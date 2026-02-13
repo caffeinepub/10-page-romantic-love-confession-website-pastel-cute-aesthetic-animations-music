@@ -1,0 +1,25 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Make Final Page “No” button clickable once then disappear",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Replace the runaway/unactivatable “No” button on the Final Page with a normal accessible button that can be activated once and then is removed, while keeping “Yes 💖” and “Let Me Think 😊” unchanged.",
+      "acceptanceCriteria": [
+        "On /10-FinalPage, the “No” button does not move away from the pointer and does not use the runaway positioning behavior.",
+        "The “No” button is keyboard-focusable and can be activated via mouse click, touch, or keyboard (e.g., Enter/Space).",
+        "After the first successful activation of “No”, the “No” button is no longer rendered/visible, leaving only “Yes 💖” and “Let Me Think 😊” on the page.",
+        "Clicking “No” does not trigger the “Yes 💖” celebration overlay and does not trigger the “I’ll wait patiently 💕” state/message.",
+        "The existing “Yes 💖” button still triggers the celebration hearts overlay and the existing “Let Me Think 😊” button still shows “I’ll wait patiently 💕” as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/10-FinalPage.tsx",
+          "operation": "modify",
+          "description": "Remove runaway/dodging behavior by deleting the useRunawayButton usage (import, refs, position styles, and preventDefault handlers). Introduce local state (e.g., noHidden/noRemoved) to track whether “No” has been activated; render a normal focusable button (or RomanticButton for consistent styling) labeled “No” only while not hidden. On first activation (click/tap/keyboard), set the hidden state so the “No” button is no longer rendered; ensure this action does not change the existing response state and therefore does not trigger the celebration overlay or the “I’ll wait patiently 💕” view. Keep “Yes 💖” and “Let Me Think 😊” labels and handlers exactly as they are."
+        }
+      ]
+    }
+  ]
+}

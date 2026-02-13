@@ -1,0 +1,51 @@
+{
+  "kind": "build_request",
+  "title": "Make Final Page “No” button clickable once and then disappear",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Update the Final Page (frontend/src/pages/10-FinalPage.tsx) so the “No” button is no longer a runaway/dodging button and is instead clickable. When the user clicks/taps/keyboard-activates “No” one time, hide/remove the “No” button so that only the two remaining options (“Yes 💖” and “Let Me Think 😊”) are shown. This new behavior must fully replace the current runaway + unclickable behavior, and the existing “Yes 💖” and “Let Me Think 😊” labels and behaviors must remain unchanged.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "it will disapper when clicked one and then only 2 options will be remaining",
+          "yes stops running away.yes . replace current behavior"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On /10-FinalPage, the “No” button does not move away from the pointer and does not use the runaway positioning behavior.",
+        "The “No” button is keyboard-focusable and can be activated via mouse click, touch, or keyboard (e.g., Enter/Space).",
+        "After the first successful activation of “No”, the “No” button is no longer rendered/visible, leaving only “Yes 💖” and “Let Me Think 😊” on the page.",
+        "Clicking “No” does not trigger the “Yes 💖” celebration overlay and does not trigger the “I’ll wait patiently 💕” state/message.",
+        "The existing “Yes 💖” button still triggers the celebration hearts overlay and the existing “Let Me Think 😊” button still shows “I’ll wait patiently 💕” as before."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend files under frontend/src/hooks/useInternetIdentity.ts(x), frontend/src/hooks/useActor.ts, frontend/src/main.tsx, and frontend/src/components/ui must not be edited (compose instead).",
+    "Keep all changes limited to the frontend; no backend changes are required for this UI-only behavior change."
+  ],
+  "nonGoals": [
+    "Do not change any page routes, page titles, or navigation.",
+    "Do not change the copy or behavior of the “Yes 💖” and “Let Me Think 😊” options.",
+    "Do not add any new animations/messages for clicking “No” beyond removing/hiding the button."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

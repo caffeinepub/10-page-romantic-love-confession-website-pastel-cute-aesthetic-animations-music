@@ -1,0 +1,37 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-13T13:35:10.112Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-12",
+        "summary": "Update the Final Page (frontend/src/pages/10-FinalPage.tsx) so the “No” button is no longer a runaway/dodging button and is instead clickable. When the user clicks/taps/keyboard-activates “No” one time, hide/remove the “No” button so that only the two remaining options (“Yes 💖” and “Let Me Think 😊”) are shown. This new behavior must fully replace the current runaway + unclickable behavior, and the existing “Yes 💖” and “Let Me Think 😊” labels and behaviors must remain unchanged.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/10-FinalPage.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/10-FinalPage.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/pages/10-FinalPage.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

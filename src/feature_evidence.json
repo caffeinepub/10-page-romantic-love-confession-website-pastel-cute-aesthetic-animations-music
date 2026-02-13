@@ -1,0 +1,23 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-final-page-frontend-src-pages-10-finalpage-tsx-so-the-no-button-is-no-longer-a-runaway-dodging-button-and-is-instead-clickable-when-the-user-clicks-taps-keyboard-activates-no-one-time-hide-remove-the-no-button-so-that-only-the-two-remaining-options-yes-and-let-me-think-are-shown-this-new-behavior-must-fully-replace-the-current-runaway-unclickable-behavior-and-the-existing-yes-and-let-me-think-labels-and-behaviors-must-remain-unchanged",
+      "featureTitle": "Update the Final Page (frontend/src/pages/10-FinalPage.tsx) so the “No” button is no longer a runaway/dodging button and is instead clickable. When the user clicks/taps/keyboard-activates “No” one time, hide/remove the “No” button so that only the two remaining options (“Yes 💖” and “Let Me Think 😊”) are shown. This new behavior must fully replace the current runaway + unclickable behavior, and the existing “Yes 💖” and “Let Me Think 😊” labels and behaviors must remain unchanged.",
+      "files": [
+        "frontend/src/pages/10-FinalPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
